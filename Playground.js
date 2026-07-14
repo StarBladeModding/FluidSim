@@ -9,6 +9,9 @@ class Playground{
 
   draw(){
     this.simulation.draw()
+
+    DrawUtils.drawLine(Vector2.Zero(), new Vector2(100,100), "#000000", 10);
+    
   }
 
   onMouseMove(x,y){
