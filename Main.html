@@ -12,7 +12,7 @@
     <canvas id="canvas" width="1280px" height"1280px" style="border: solid 1px black></canvas>
     <script src="Playground.js"></script>
     <script src="Simulation.js"></script>
-
+    <script src="Vector2.js"></script>
     <script>
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
@@ -50,7 +50,7 @@
          
          canvas.addEventListener('mousemove', function(evt){
            let mouse = getMousePos(canvas,evt);
-           playground.onMouseMove(new Vector() mouse.x,mouse.y);
+           playground.onMouseMove(new Vector2( mouse.x,mouse.y));
          }, false)
 
         canvas.addEventListener('mousedown', function(evt){
