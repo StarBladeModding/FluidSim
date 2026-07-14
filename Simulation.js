@@ -4,17 +4,17 @@ class Simulation{
     this.AMOUNT_PARTICLES = 100;
     this.VELOCITY_DAMPING = 1;
 
-    this.instantiateParticles
+    this.instantiateParticles();
   }
 
   instantiateParticles(){
-
+    let offsetBetweenParticles = 10;
     let xParticles = Math.sqrt(this.AMOUNT_PARTICLES);
     let yParticles = xParticles
 
     for(let x=0; x < xParticles; x++){
       for(let y=0; y < yParticles; y++){
-        let position = new Vector2(x,y);
+        let position = new Vector2(x * offsetBetweenParticles, y * offsetBetweenParticles);
         this.particles.push(new Particle(position));
       }
     }
