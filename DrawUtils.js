@@ -6,3 +6,28 @@ class DrawUtils{
     static strokePoint(position, radius, color){
         
     }
+
+    static drawLine(startPosition, endPosition, color, lineThickness = 1){
+        ctx.beginPath();
+        ctx.strokeStyle = color;
+        ctx.rect(start.x, start.y, size.x, size.y);
+        ctx.stroke();
+        ctx.closePath();
+    }
+
+    static drawRect(start, size, color){
+        ctx.beginPath();
+        ctx.strokeStyle = color;
+        ctx.rect(start.x, start.y, size.x, size.y);
+        ctx.stroke();
+        ctx.closePath();
+    }
+
+    static drawText(position, size, color, text){
+        ctx.font = size+"px Arial"
+        ctx.fillStyle = color;
+        ctx.fillText(text, position.x, position.y);
+    }
+
+
+}
