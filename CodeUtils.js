@@ -1,3 +1,0 @@
-class DrawUtils{
-    static drawPoint
-}
