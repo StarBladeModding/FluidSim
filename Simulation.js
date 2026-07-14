@@ -1,5 +1,5 @@
 class Simulation{
-  constructor{
+  constructor(){
     
   }
 

@@ -12,14 +12,14 @@ class Playground{
   }
 
   onMouseMove(x,y){
-    console.log("Mouse moved to: "+x+", "+y+);
+    console.log("Mouse moved to:" + x + ", " + y)
   }
 
   onMouseDown(button){
-    console.log("Mouse button presse.: "+button)
+    console.log("Mouse button pressed: "+button)
   }
 
   onMouseUp(button){
-    console.log("Mouse button presse.: "+button)
+    console.log("Mouse button released: "+button)
   }
 }
