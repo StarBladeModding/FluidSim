@@ -2,14 +2,14 @@ class Simulation{
   constructor(dt){
     this.dt = dt;
     this.particles = [];
-    this.AMOUNT_PARTICLES = 100;
+    this.AMOUNT_PARTICLES = 1000;
     this.VELOCITY_DAMPING = 1;
 
     this.instantiateParticles();
   }
 
   instantiateParticles(){
-    let offsetBetweenParticles = 10;
+    let offsetBetweenParticles = 15;
     let offsetAllParticles = new Vector2(750,100);
 
     let xParticles = Math.sqrt(this.AMOUNT_PARTICLES);
