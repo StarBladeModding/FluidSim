@@ -67,8 +67,6 @@ class Simulation{
     }
   }
 
-
-
   draw(){
     for(let i=0; i < this.particles.length; i++){
       let position = this.particles[i].position;
