@@ -1,8 +1,8 @@
 class Simulation{
   constructor(dt){
-    this.dt = dt;
+    this.dt = 1/120;
     this.particles = [];
-    this.AMOUNT_PARTICLES = 1000;
+    this.AMOUNT_PARTICLES = 100;
     this.VELOCITY_DAMPING = 1;
 
     this.instantiateParticles();
@@ -48,11 +48,32 @@ class Simulation{
     }
   }
 
+  worldBoundary(){
+    for(let i=0; i < this.particles.length; i++){
+      let position = this.particles[i].position;
+      
+      if(pos.x < 0){
+        this.particles[i].velocity.x *= -1;
+      }
+      if(pos.y < 0){
+        this.particles[i].velocity.y *= -1;
+      }
+      if(pos.x > canvas.width){
+        this.particles[i].velocity.x *= -1;
+      }
+      if(pos.y > canvas.height){
+        this.particles[i].velocity.y *= -1;
+      }
+    }
+  }
+
+
+
   draw(){
     for(let i=0; i < this.particles.length; i++){
       let position = this.particles[i].position;
       let color = this.particles[i].color;
-      DrawUtils.drawPoint(position, 5, color);
+      DrawUtils.drawPoint(position, 10, color);
     }
   }
 }

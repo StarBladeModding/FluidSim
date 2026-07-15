@@ -28,6 +28,7 @@
       mainLoop();
 
       function updatePlayground(dt){
+        clearCanvas();
         playground.update(dt);
         playground.draw();
       }
@@ -41,11 +42,16 @@
         updatePlayground(deltaTime);
         lastTime = currentTime;
       }
-        
-         function getMousePos (canvas, evt){
-           var rect = canvas.getBoundingClientRect();
-           return {
-             x: evt.clientX - rect.left,
+
+      function clearCanvas(){
+        ctx.fillStyle = "#242321";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      function getMousePos (canvas, evt){
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
              y: evt.clientY - rect.top
            };
          }
