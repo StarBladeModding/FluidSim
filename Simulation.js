@@ -1,9 +1,6 @@
 class Simulation{
   constructor(dt){
-    if(dt === undefined) {
-      throw new Error("dt is not defined in Simulation constructor");
-    }
-    this.dt = dt;
+    let dt = 1/60;
     this.particles = [];
     this.AMOUNT_PARTICLES = 100;
     this.VELOCITY_DAMPING = 1;
@@ -25,7 +22,6 @@ class Simulation{
       }
     }
   }
-
   update(dt){
     
   }
