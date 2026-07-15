@@ -1,5 +1,6 @@
 class Simulation{
   constructor(){
+    this.dt = 0;
     this.particles = [];
     this.AMOUNT_PARTICLES = 100;
     this.VELOCITY_DAMPING = 1;
