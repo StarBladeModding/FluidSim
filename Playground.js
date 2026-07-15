@@ -1,10 +1,10 @@
 class Playground{
   constructor(){
-    this.simulation = new Simulation();
+   this.simulation = new Simulation();
   }
 
   update(){
-    this.simulation.update(dt);
+    this.simulation.update(this.simulation.dt);
   }
 
   draw(){
