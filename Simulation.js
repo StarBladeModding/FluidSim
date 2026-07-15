@@ -17,20 +17,27 @@ class Simulation{
 
     for(let x=0; x < xParticles; x++){
       for(let y=0; y < yParticles; y++){
-        let position = new Vector2(x * offsetBetweenParticles + offsetAllParticles.x, y * offsetBetweenParticles + offsetAllParticles.y);
-        this.particles.push(new Particle(position));
+        let position = new Vector2(x * offsetBetweenParticles + offsetAllParticles.x,
+        y * offsetBetweenParticles + offsetAllParticles.y);
+
+        let particle = new Particle(position);
+        particle.velocity = Scale(new Vector2(-0.5 + Math.random()), 200)
+
+
+        this.particles.push(particle);
       }
     }
   }
   update(dt){
-    
+    this.predictPositions(dt);
+    this.conmputeNextVelocity(dt);
   }
 
   predictPositions(dt){
     for(let i=0; i < this.particles.length; i++){
       this.particles[i].prevPosition = this.particles[i].position.Cpy();
       let positionDelta = Scale(this.particles[i].velocity, dt * this.VELOCITY_DAMPING);
-      this.particles[i].position = Add(this.particles[i].position, )
+      this.particles[i].position = Add(this.particles[i].position, positionDelta);
     }
   }
 

@@ -26,6 +26,10 @@ class Vector2{
     console.log("Vector2",this.x, this.y);
   }
 
+  Cpy(){
+    return new Vector2(this.x, this.y);
+  }
+
   static Zero(){
     return new Vector2(0,0);
   }
